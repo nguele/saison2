@@ -1,4 +1,5 @@
 // //epiose 1
+
 // let email = prompt("entrez votre adresse mail :");
 // let emailRegexp = new RegExp('^[a-zA-Z0-9.-]+[@]{1}[a-zA-Z0-9.-]+[.]{1}[a-z]{2,10}$', 'g'); // verification des caracteres
 
@@ -11,6 +12,7 @@
 // }
 
 //episode2
+
 // let mdp = prompt("");
 // let condition = new RegExp("^[a-zA-Z]+$");
 // console.log(condition);
@@ -25,6 +27,7 @@
 // }
 
 //episode 3
+
 // let nom = prompt("quel est votre nom:" + "");
 // let enfant = Number(prompt("combien d'enfant avez vous" + ""));
 // const pluriel = "s";
@@ -41,6 +44,7 @@
 // console.log(enfant);
 
 //episode 4
+
 // let jour = Number(prompt("quel est votre jour de naissance!!!" + ""));
 // let moi = Number(prompt("quel est votre moi de naissance!!!" + ""));
 // let annee = Number(prompt("quel est votre annee de naissance!!!" + ""));
@@ -58,6 +62,7 @@
 // }
 
 // //episode 5
+
 // let nom = prompt("Quel est votre Nom ?");
 // let prenom = prompt("Quel est votre Prénom ?");
 // let sexe;
@@ -80,7 +85,8 @@
 // console.log(identitee);
 
 // episope 6
-//let nombre = parseInt(prompt("entrez un nombre equiveaux au jour d'une semaine" + ""))
+
+////let nombre = parseInt(prompt("entrez un nombre equiveaux au jour d'une semaine" + ""))
 // let jour = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]; // tableau des jour de la semaine
 // alert(jour[Number(prompt("entrez un nombre conrespendant a un jour de la semaine.\n 0 = lundi "))]); //lecture du tableau en fonction des nombres
 // console.log(jour);
@@ -108,17 +114,64 @@
 
 // //episode 8
 
-// while (ajouterNom = prompt("ajouterNom \n pour finir saisissez non" + " ") != "non") {
+/*let infoEleve;
+let nomEleve = [];
 
-//     nom = prompt("entrez votre nom");
-//     note = Number(prompt(" quel est votre moyenne ?"));
+let eleveMax = {
+    note: 0,
+    nom: ""
+};
 
-//     let nomEtNote = {
-//         nom: ["nom"],
-//         note: ["note"]
-//     };
-//     console.log(nomEtNote);
-//     console.log(nomEtNote.nom);
-//     console.log(nomEtNote.note);
-//     // console.log(ajouterNom);
-// }
+
+while (infoEleve != "fin") {
+    infoEleve = prompt(" entrez votre nom et votre moyenne.\n exemple : nom = 19 \n saisissez <<fin>> pour terminer!!");
+
+    const [nom, note] = infoEleve.split("=");
+    if (note >= 0 && note <= 20) {
+        let eleve = {
+            nom: nom,
+            note: Number(note)
+        }
+        nomEleve.push(eleve);
+        console.log(eleve);
+    } else {
+        alert(" entrez une note valide ")
+    }
+
+
+}
+console.log(nomEleve);
+
+
+for (let i = 0; i < nomEleve.length; i++) {
+
+    if (eleveMax.note < nomEleve[i].note) {
+        eleveMax = nomEleve[i];
+    }
+}
+
+alert("Mr " + eleveMax.nom + " est le premier avec une moyenne de " + eleveMax.note + " / 20");*/
+
+
+
+
+
+//tableau de note de math
+let noteMath = [];
+noteMath[0] = Number(prompt("entrez votre note N1 de math" + "  "));
+noteMath[1] = Number(prompt("entrez votre note N2 de math" + "  "));
+noteMath[2] = Number(prompt("entrez votre note N3 de math" + "  "));
+noteMath[3] = Number(prompt("entrez votre note N4 de math" + "  "));
+noteMath[4] = Number(prompt("entrez votre note N5 de math" + "  "));
+//somme des notes
+let moyenne = noteMath[0] + noteMath[1] + noteMath[2] + noteMath[3] + noteMath[4];
+// conditionnement des note entre 0 et 20
+if ((noteMath[0] >= 0 && noteMath[0] <= 20) && (noteMath[1] >= 0 && noteMath[1] <= 20) && (noteMath[2] >= 0 && noteMath[2] <= 20) && (noteMath[3] >= 0 && noteMath[3] <= 20) && (noteMath[4] >= 0 && noteMath[4] <= 20)) {
+    alert(noteMath);
+    alert("votre moyenne en math est de " + moyenne / 5 + " / 20 ");
+} else {
+    alert("saisie incorrecte!!");
+}
+console.log(noteMath);
+console.log(moyenne);
+console.log(moyenne / 5);

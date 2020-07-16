@@ -1,0 +1,102 @@
+// let tableNom = [];
+// let tableNote = tableNom.map(function(value, index) {
+//     return index + " : " + value + "!";
+
+// });
+// // // let objetEleve = {
+
+// // //     tableNom: tableNom = [],
+
+// // //     tableNote: tableNote = []
+// // // };
+
+// // //tableNom.push(prompt("entrez votrs nom" + ""));
+// // //tableNote.push(prompt("entrez votrs moyenne" + ""));
+// // console.log(tableNote);
+
+// while (ajouterNom = prompt("ajouter Nom ? \n pour finir saisissez non" + " ") != "non") {
+//     tableNom.push(prompt("entrez votrs nom" + ""));
+//     tableNote.push(Number(prompt("entrez votrs moyenne" + "")));
+// };
+
+// // let noteMax = tableNote[0];
+// console.log(tableNote);
+
+// // if (ajouterNom = "non") {
+// //     for (let i = 0; i < tableNote.length; i++) {
+// //         if (tableNote[i] >= noteMax) {
+// //             noteMax = tableNote[i];
+// //         }
+
+// //     }
+
+// // }
+// // console.log(noteMax);
+// // console.log(ajouterNom);
+// // console.log(tableNote);
+
+
+
+
+
+
+
+
+// // if (ajouterNom = "non") {
+// //     for (let i = 0; i < tableNom.length; i++) {
+
+// //         console.log("Index => " + i + " | valeur => " + tableNom[i]);
+// //     }
+
+// //     for (let i = 0; i < tableNote.length; i++) {
+
+// //         console.log("Index => " + i + " | valeur => " + tableNote[i]);
+// //     }
+
+
+// // }
+
+
+// // tableNote = tableNom;
+
+// // console.log(tableNom);
+// //console.log(tableNote);
+// // console.log(assignation);
+// // alert(assignation);
+
+/*let table1 = ["a", "b", "c", "d", ];
+let table2 = [];
+
+let clone1 = Array.from(table1);
+console.log(table1);
+console.log(clone1);*/
+
+// let eleve = ['jule', 'jean', 'dodo', 'papa'];
+// //let moyenne=[];
+// let resultat = [2, 5, 5, 8];
+
+
+// /*while(ajoutNote=(prompt('Voulez vous entrer un nom?\n sinon entrez "non"') !='non')){
+
+// 	eleve.push(prompt('Entrez un nom: '));
+
+// 	moyenne.push(prompt('Entrez votre moyenne: '));
+
+// } */
+
+// resultat = eleve.map(function(index, value, array) {
+//     //console.log(value);
+//     return index + ' : ' + resultat2[0];
+// });
+// let resultat2 = resultat.map(function(index) {
+//     //console.log(index);
+//     return index + ":";
+// });
+//console.log(resultat);
+//console.log(resultat2);
+//console.log(eleve);
+
+//resultat2[0];
+//resultat[3];
+//console.log(resultat[2]);
+//console.log(resultat2[0]);

@@ -1,218 +1,193 @@
-/**
- *                                          Episode 9 : A table !
- *  
- * Ecrire une fonction qui prend un nombre en paramètre et affiche sa table de multiplication en console.
- */
-/*
-const multiplication = (nombre) =>{
-    let calcule = 0;
-    let  ListeMultiplication = [];
-    
-   for(let i = 0; i <= 12; i++)
-   {
-        calcule = nombre*i; 
-        ListeMultiplication.push( nombre + " * "+ i + " =  " + calcule);
-   }
-    return ( ListeMultiplication);
-};
+//episode 9
 
-
-let nombreSaisi = parseInt(prompt("saisir un nombre "));
-
-console.table(multiplication(nombreSaisi));
-
-
-
-
-
-
-/**
- *                                  Episode 10 : Pair ou impair ?
- * 
- * Ecrire une fonction qui prend en paramètre un nombre et retourne true 
- * si le nombre est pair ou false si le nombre est impair.
- */
-
-/*
-const pairImpair = (nombre) =>{
-    
-    if(nombre % 2 === 0)
-    {
-        return true;
+/*function multiple(nombre) {
+    nombre;
+    for (let i = 0; i <= 10; i++) {
+        console.log(nombre + " x " + i + " = " + nombre * i);
+        //alert(nombre + " x " + i + " = " + nombre * i);
     }
-    else
-    {
-        return false;
+    return nombre
+}
+console.log(multiple(parseInt(prompt("entrez le nombre a multiplier" + ""))));*/
+
+//episode 10
+
+/*function nombres(nombreP) {
+    nombreP;
+    if (nombreP % 2 == 0) {
+        alert(true);
+        console.log(true);
+    } else {
+        alert(false);
+        console.log(false);
     }
+    return nombreP
+}
+console.log(nombres(parseInt(prompt("saisir un nombre" + ""))));*/
+
+//episode 11
+/*//epi 1
+function eMail(email, emailRegexp) {
+    email;
+    emailRegexp = new RegExp('^[a-zA-Z0-9.-]+[@]{1}[a-zA-Z0-9.-]+[.]{1}[a-z]{2,10}$', 'g'); // verification des caracteres
+
+    if (email.match(emailRegexp)) {
+        console.log('adresse email valide');
+        alert('adresse email valide');
+    } else {
+        console.log('adresse email invalide');
+        alert('adresse email invalide');
+    }
+    return email
+        //return emailRegexp
+
+}
+console.log(eMail(email = prompt("entrez votre adresse mail :")));*/
+
+/*// epi 2
+function motDePasse(mdp, nombreCaractere, lettreMiniscule, ) {
+
+    mdp;
+    nombreCaractere = /.{8,}/g;
+    lettreMiniscule = /\d+/g; //veriefie si ya au moins un chiffre dans dans les caracter saisie.
+    lettreMajuscule = /[A-Z]+/g;
+    if (nombreCaractere.test(mdp) && lettreMiniscule.test(mdp) && lettreMajuscule.test(mdp)) {
+        alert("Mot de passe  Valide");
+    } else {
+        alert("invalide");
+    }
+    return mdp
+}
+console.log(motDePasse(prompt("entrez votre mot de passe: ")));*/
+
+/*//episo 3
+
+function profile(nom, enfant, pluriel) {
+
+    nom;
+    enfant;
+    pluriel = "s";
+    if (nom == nom && enfant == 0) {
+        alert(nom + " vous n'avez pas d'enfant");
+    } else if (nom == nom && enfant == 1) {
+        alert(nom + " vous avez " + enfant + " d'enfant ");
+    } else if (nom == nom && enfant >= 2) {
+        alert(nom + " vous avez " + enfant + " enfant" + pluriel);
+    } else {
+        alert(" erreur verifiez les champs!!");
+        console.log(nom);
+    }
+
+    return nom, enfant;
 }
 
-let nombreSaisi = parseInt(prompt("saisir un nombre ")) ;
-
-alert (pairImpair(nombreSaisi));
-
-
-
-
-
+console.log(
+    profile(
+        prompt("quel est votre nom:" + ""),
+        parseInt(prompt("combien d'enfant avez vous" + ""))
+    )
+);*/
 
 
-/**
- *                                           Episode 11 : Le boss
- * 
- * Transformer les épisodes 1, 2, 4, 6 et 7 en leur équivalent en fonction.
- * NB : la fonction de l’épisode 7 prendra un tableau en paramètre.
- * 
- * */
-/*
-const verifierEmail = (email) => {
-    
-    let resultat = /\w+@\w+\.\w+/;
-    let test = resultat.test(email);
+/*//epi 4
 
-    if(test)
-    {
-        return("Votre E-mail est: "+ email);
+function naissance(jour, moi, annee) {
+    Number(jour);
+    Number(moi);
+    Number(annee);
+
+    ////let moiLettre = ["janvier", "fevrier", "mars", "avril", "mai"];
+    ////let moiNumero = ["1", "2", "3", "4", "5"];
+    ////let moiLettre = moi;
+
+    if ((jour >= 01 && jour <= 31) && (moi >= 01 && moi <= 12) && (annee >= 1800 && annee <= 2017)) {
+        alert("votre jour de naissance est le " + jour + "/" + moi + "/" + annee);
+        console.log(jour + " / " + moi + " / " + annee);
+    } else {
+        alert("vous avez mal saisie un champ");
+
     }
-    else
-    {
-        return("Erreur l’adresse e-mail n’est pas correctement saisie");
-    }
-};
-
-let emailSaisi = prompt("Quelle est votre adress mail?");
-
-alert(verifierEmail(emailSaisi));
-
-
-
-
-
-/**
- *                          Episode 11 : Le boss /  Episode 2
- */
-
-
-/*
-const verifierPassword = (password) => 
-{
-    let resultat1 =  /.{8,}/g;
-    let resultat2 = /\d+/g;
-    let resultat3 = /[A-Z]+/g;
-
-    if( resultat1.test(password) && resultat2.test(password) && resultat3.test(password))
-    {
-        return(`Mot de passe : ${password}\n Validé !! `);
-    }
-    else
-    {
-        return(`Votre mot de passe n'est pas bon du tout!`);
-    }
-};
-
-let passwordSaisi = prompt("Faites valider votre Mot de passe: ");
-
-alert(verifierPassword(passwordSaisi));
-
-
-
-
-
- /**
-  *                             Episode 11 : Le boss /  Episode 4
-  * */                    
-
-/*
-const verificationFormatNaissance = (dateNaissance) => {
-
-    let verification = /\d{2}\/\d{2}\/\d{4}/g;
-    return ((verification.test(dateNaissance) === true) ?`Format correct!\n ${dateNaissance}` : `Format incorrect!\n ${dateNaissance}`);
-};
-
-let dateNaissanceSaisi = prompt("Entrez votre date de naissance sous ce format (JJ/MM/AAAA) :");
-
-alert (verificationFormatNaissance(dateNaissanceSaisi));
-*/
-
-
-
-
-
-
-                        // Episode 11 : Le boss /  Episode 6
-
-
-/*
-const trouverJourSemaine = (numeroJour) => {
-
-    let jourSemaine = ["Lundi",
-    "Mardi",
-    "Mercredi",
-    "Jeudi",
-    "Vendredi",
-    "Samedi",
-    "Dimanche"];
-
-    if(numeroJour >= 1 && numeroJour <= 7)
-    {
-        return(`${numeroJour} correspond à  ${jourSemaine[numeroJour - 1]}`);
-    }
-    else
-    {
-        return("Erreur ! Vous devez saisir un nombre dans l'intervalle 1 et 7");
-    }
+    return jour, moi, annee;
 }
-let numeroJourSaisi = parseInt(prompt("Entrer un nombre compris entre 1 et 7 désignant un jour de la semaine"));
 
-alert (trouverJourSemaine(numeroJourSaisi));
-*/
+console.log(
+    naissance(
+        prompt("quel est votre jour!!!" + " "),
+        prompt("quel est votre moi de naissance!!!" + ""),
+        prompt("quel est votre annee de naissance!!!" + "")
+    )
+);*/
 
+//epi 5
 
+/*function identitees(nom, prenom, sexe, profile, identitee) {
+    nom;
+    prenom;
+    sexe;
+    profile;
 
-
-
-
-                        // Episode 11 : Le boss /  Episode 7
-
-                        
-let invitSaisi = prompt("Combien de notes voulez-vous saisir ? ");
-let noteSaisi = prompt("Entrez votre note en mathématique :");
-    
-const calculMoyenne = (invit, note) =>{
-
-    let noteTab = new Array(parseInt(invit));
-    let somme = 0;
-    let moyenne = 0;
-    let i = 0;
-
-    while (i < parseInt(invit))
-    {
-        if (parseInt(note) >= 0 && parseInt(note) <= 20) 
-        {
-            noteTab[i] = parseInt(note);
-            i ++;
-            somme += parseInt(note);
-            
-            if(i<parseInt(invit))
-            {
-                note = prompt("Entrez votre note en Mathematique");
-            }
-        } 
-        else
-        {
-            alert(`Vous devez entrer une note entre 0 et 20 !`);
-            note = prompt("Entrez votre note en Mathematique");
-        }   
+    // condition qui gere le profile et sexe
+    if (sexe == "Homme" || sexe == "Femme") {
+        (sexe === "Homme") ? profile = "M.r": profile = "Mme";
+    } else {
+        alert("vous n'avez pas respecter la syntaxe  de Homme ou Femme!!!")
     }
-    console.log(noteTab);
 
-    if(somme == 0)
-    {
-        alert(" Vous n'avez rien rentré apparement ...")
-    }
-    else
-    {
-        moyenne = somme/i;
-        alert(`Votre moyenne est : ${moyenne}`);    
-    }
+    //Déclaration de l'objet qui récupère les informations
+    identitee = {
+        nom: nom,
+        prenom: prenom,
+        sexe: sexe,
+        titre: profile
+    };
+    console.log(identitee);
+    return nom, prenom, sexe;
 }
-calculMoyenne(invitSaisi,noteSaisi);
+console.log(
+    identitees(
+        prompt("Quel est votre Nom ?" + " "),
+        prompt("Quel est votre Prénom ?" + " "),
+        prompt("Quel est  votre Sexe ? (Choisir Homme ou Femme )" + " ")
+    )
+);*/
+
+//epi 6
+
+/*//fonction prend en parametre un nombre 
+function semaine(nombre) {
+
+    //tableau des jours de la semaine 
+    jours = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"];
+
+    //return le jour correspondant au nombre
+    return jours[nombre]
+}
+alert(semaine(Number(prompt("entrez un nombre conrespendant a un jour de la semaine.\n 0 = lundi "))));*/
+
+//epi 9
+
+function calcul(noteMath, moyenne) {
+
+    //tableau de note de math
+    noteMath = [];
+
+    //somme des notes
+    moyenne = noteMath[0] + noteMath[1] + noteMath[2] + noteMath[3] + noteMath[4];
+    // conditionnement des note entre 0 et 20
+    if ((noteMath[0] >= 0 && noteMath[0] <= 20) && (noteMath[1] >= 0 && noteMath[1] <= 20) && (noteMath[2] >= 0 && noteMath[2] <= 20) && (noteMath[3] >= 0 && noteMath[3] <= 20) && (noteMath[4] >= 0 && noteMath[4] <= 20)) {
+        alert(noteMath);
+        alert("votre moyenne en math est de " + moyenne / 5 + " / 20 ");
+    } else {
+        alert("saisie incorrecte!!");
+    }
+    console.log(noteMath);
+    console.log(moyenne);
+    console.log(moyenne / 5);
+
+    return moyenne
+}
+console.log(
+    calcul(
+        [0] = Number(prompt("entrez votre note N1 de math" + "  ")), [1] = Number(prompt("entrez votre note N2 de math" + "  ")), [2] = Number(prompt("entrez votre note N3 de math" + "  ")), [3] = Number(prompt("entrez votre note N4 de math" + "  ")), [4] = Number(prompt("entrez votre note N5 de math" + "  "))
+    )
+);
